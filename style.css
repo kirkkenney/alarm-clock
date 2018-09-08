@@ -1,0 +1,721 @@
+/* LAPTOP / DESKTOP STYLES */
+
+@media screen and (min-width: 600px) { 
+
+#body {
+	background-color: rgb(40,40,40);
+	color: rgb(225,225,225);
+	height: 100%;
+	width: 100%;
+}
+#inputCont {
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	left: 0;
+	top: 20%;
+	display: flex;
+	max-height: 60%;
+	overflow: hidden;
+}
+#hourCont, #minCont {
+	height: 100%;
+	width: 50%;
+	text-align: center;
+}
+#hourInput {
+	display: block;
+	height: 50%;
+	width: 50%;
+	background-color:rgba(0,0,0,0);
+	text-align: center;
+	color: inherit;
+	font-size: 100px;
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 25%;
+	z-index: 1;
+}
+#minInput {
+	display: block;
+	height: 50%;
+	width: 50%;
+	background-color:rgba(0,0,0,0);
+	text-align: center;
+	color: inherit;
+	font-size: 100px;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 25%;
+	z-index: 1;	
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#hourInc, #minInc {
+	height: 25%;
+	width: 25%;
+	position: absolute;
+	top: 0;
+	font-size: 80px;
+	color: inherit;
+	background-color: inherit;
+	border: none;
+	z-index: 2;
+}
+#hourDec, #minDec {
+	height: 25%;
+	width: 25%;
+	position: absolute;
+	bottom: 0;
+	font-size: 80px;
+	color: inherit;
+	background-color: inherit;
+	border: none;
+	z-index: 2;
+}
+#hourInc, #hourDec {
+	left: 12.5%;
+	cursor: pointer;
+}
+#minInc, #minDec {
+	right: 12.5%;
+	cursor: pointer;
+}
+@keyframes increaseInput {
+	15% {
+		color: rgba(225,225,225, 0);
+		margin-top: -10%;
+	}
+	30% {
+		color: rgba(225,225,225,0);
+		margin-top: 10%;
+	}
+	100% {
+		color: inherit;
+		margin: 0;
+	}
+}
+@keyframes decreaseInput {
+	20% {
+		color: rgba(225,225,225, 0);
+		margin-top: 10%;
+	}
+	40% {
+		color: rgba(225,225,225,0);
+		margin-top: -10%;
+	}
+	100% {
+		color: inherit;
+		margin: 0;
+	}
+}
+#date {
+	color: inherit;
+	font-size: 25px;
+	position: absolute;
+	right: 2%;
+	bottom: 2%;
+}
+#time {
+	color: inherit;
+	font-size: 25px;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+}
+#setAlarm, #resetAlarm {
+	width: 60%;
+	left: 20%;
+	position: absolute;
+	font-size: 30px;
+	padding: 5px 0;
+	color: inherit;
+	border: inherit;
+	background-color:rgba(0,0,0,0);
+	border: solid 1px;
+}
+#resetAlarm {
+	top: 12%;
+	cursor: pointer;
+}
+#setAlarm {
+	bottom: 12%;
+	cursor: pointer;
+}
+#settings {
+	position: absolute;
+	top: 0%;
+	left: 1%;
+	font-size: 50px;
+	cursor: pointer;
+}
+#settingsScreen, #themesScreen, #wakeUpSettings, #tonesScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	display: block;
+	margin-left: -100%;
+	transition: all 0.2s linear;
+}
+#settingsScreen {
+	z-index: 5;
+}
+#themesScreen, #wakeUpSettings, #tonesScreen {
+	z-index: 10;
+}
+.close {
+	font-size: 60px;
+	position: absolute;
+	top: 0%;
+	left: 4%;
+	cursor: pointer;
+}
+#settingsCont {
+	width: 100%;
+	text-align: center;
+	margin-top: 10%;
+	color: inherit;
+	font-size: 40px;
+}
+#themesCont {
+	width: 100%;
+	text-align: center;
+	margin-top: 5%;
+	color: inherit;
+	font-size: 30px;
+}
+.settingsOption {
+	margin: 5% 0;
+	cursor: pointer;
+	font-size: 50px;
+}
+#settingsWarning {
+	width: 90%;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	margin: 0 5%;
+	text-align: center;
+	font-size: 25px;
+	display: none;
+}
+.themesOption {
+	margin: 2% 0;
+	font-size: 40px;
+	cursor: pointer;
+}
+#wakeCont {
+	width: 100%;
+	height: 50%;
+	margin-top: 10%;
+	color: inherit;
+	text-align: center;
+	font-size: 50px;
+}
+.wakeOption {
+	width: 40%;
+	margin: 5% 30%;
+	padding: 10px 0;
+	font-size: 50px;
+	cursor: pointer;
+}
+#wakeNormal {
+	border: solid 2px;
+}
+#customColor {
+	display: none;
+}
+input[type="color"] {
+	width: 30%;
+	height: 50px;
+}
+#mathsCont, #wakeUpNormalScreen, #snoozeScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: inherit;
+	color: inherit;
+	z-index: 15;
+	margin-left: -100%;
+	transition: all 0.2s linear;
+}
+#offNormalWake {
+	width: 60%;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	margin: 15% 20% 0 20%;
+	font-size: 50px;
+	border: solid 2px;
+	cursor: pointer;
+}
+.snoozeControl {
+	width: 50%;
+	height: 100px;
+	line-height: 100px;
+	font-size: 50px;
+	text-align: center;
+	margin: 10% 25%;
+	border: solid 2px;
+	cursor: pointer;
+}
+@keyframes wakeAnimate {
+	50% {
+		transform: scale(1.1);
+		color: red;
+	}
+	100% {
+		transform: scale(1);
+		color: inherit;
+	}
+}
+#calc {
+	width: 100%;
+	margin-top: 10%;
+	font-size: 90px;
+	text-align: center;
+}
+#calc span {
+	width: 33%;
+	text-align: center;
+	margin: 0 5%;
+}
+#numInput {
+	width: 40%;
+	margin: 5% 28% 0 28%;
+	font-size: 60px;
+	padding: 10px;
+	text-align: center;
+	color: inherit;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-bottom: solid 5px;
+}
+#calcSubmit {
+	display: block;
+	font-size: 30px;
+	padding: 15px 5px;
+	color: inherit;
+	background-color: rgba(0,0,0,0);
+	border: solid 2px;
+	width: 40%;
+	margin: 5% 30% 0 30%;
+	cursor: pointer;
+}
+#tonesCont {
+	font-size: 30px;
+	color: inherit;
+	background-color: inherit;
+	width: 100%;
+	height: 100%;
+	margin-top: 10%;
+}
+.songLine {
+	width: 60%;
+	margin: 2% 15% 0 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	font-size: 30px;
+	cursor: pointer;
+}
+.songLine input[type="radio"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.songLine input[type="radio"]:checked~span {
+	visibility: visible;
+}
+.songLine span {
+	width: 15%;
+	text-align: center;
+	margin-left: 4%;
+	visibility: hidden;
+}
+.songLine label {
+	width: 80%;
+	margin-left: 1%;
+}
+@keyframes audioPulse {
+	50% {
+		transform:scale(1.4);
+	}
+	100% {
+		transform:scale(1.0);
+	}
+}
+
+}
+
+/* MOBILE STYLES */
+
+@media screen and (max-width: 600px) { 
+
+#body {
+	background-color: rgb(40,40,40);
+	color: rgb(225,225,225);
+	height: 100%;
+	width: 100%;
+}
+#inputCont {
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	left: 0;
+	top: 18%;
+	display: flex;
+	max-height: 60%;
+	overflow: hidden;
+}
+#hourCont, #minCont {
+	height: 100%;
+	width: 50%;
+	text-align: center;
+}
+#hourInput {
+	display: block;
+	height: 50%;
+	width: 50%;
+	background-color:rgba(0,0,0,0);
+	text-align: center;
+	color: inherit;
+	font-size: 80px;
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 25%;
+	z-index: 1;
+}
+#minInput {
+	display: block;
+	height: 50%;
+	width: 50%;
+	background-color:rgba(0,0,0,0);
+	text-align: center;
+	color: inherit;
+	font-size: 80px;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 25%;
+	z-index: 1;	
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#hourInc, #minInc {
+	height: 25%;
+	width: 25%;
+	position: absolute;
+	top: 0;
+	font-size: 70px;
+	color: inherit;
+	background-color: inherit;
+	border: none;
+	z-index: 2;
+}
+#hourDec, #minDec {
+	height: 25%;
+	width: 25%;
+	position: absolute;
+	bottom: 0;
+	font-size: 70px;
+	color: inherit;
+	background-color: inherit;
+	border: none;
+	z-index: 2;
+}
+#hourInc, #hourDec {
+	left: 12.5%;
+	cursor: pointer;
+}
+#minInc, #minDec {
+	right: 12.5%;
+	cursor: pointer;
+}
+@keyframes increaseInput {
+	15% {
+		color: rgba(225,225,225, 0);
+		margin-top: -10%;
+	}
+	30% {
+		color: rgba(225,225,225,0);
+		margin-top: 10%;
+	}
+	100% {
+		color: inherit;
+		margin: 0;
+	}
+}
+@keyframes decreaseInput {
+	20% {
+		color: rgba(225,225,225, 0);
+		margin-top: 10%;
+	}
+	40% {
+		color: rgba(225,225,225,0);
+		margin-top: -10%;
+	}
+	100% {
+		color: inherit;
+		margin: 0;
+	}
+}
+#date {
+	color: inherit;
+	font-size: 20px;
+	position: absolute;
+	right: 2%;
+	bottom: 2%;
+}
+#time {
+	color: inherit;
+	font-size: 25px;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+}
+#setAlarm, #resetAlarm {
+	width: 60%;
+	left: 20%;
+	position: absolute;
+	font-size: 25px;
+	padding: 5px 0;
+	color: inherit;
+	border: inherit;
+	background-color:rgba(0,0,0,0);
+	border: solid 1px;
+}
+#resetAlarm {
+	top: 12%;
+	cursor: pointer;
+}
+#setAlarm {
+	bottom: 12%;
+	cursor: pointer;
+}
+#settings {
+	position: absolute;
+	top: 0%;
+	left: 2%;
+	font-size: 40px;
+	cursor: pointer;
+}
+#settingsScreen, #themesScreen, #wakeUpSettings, #tonesScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	display: block;
+	margin-left: -100%;
+	transition: all 0.2s linear;
+}
+#settingsScreen {
+	z-index: 5;
+}
+#themesScreen, #wakeUpSettings, #tonesScreen {
+	z-index: 10;
+}
+.close {
+	font-size: 50px;
+	position: absolute;
+	top: 0%;
+	left: 5%;
+	cursor: pointer;
+}
+#settingsCont {
+	width: 100%;
+	text-align: center;
+	margin-top: 30%;
+	color: inherit;
+	font-size: 35px;
+}
+#themesCont {
+	width: 100%;
+	text-align: center;
+	margin-top: 15%;
+	color: inherit;
+}
+.settingsOption {
+	margin: 15% 0;
+	cursor: pointer;
+}
+#settingsWarning {
+	width: 90%;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	margin: 0 5%;
+	text-align: center;
+	font-size: 20px;
+	display: none;
+}
+.themesOption {
+	margin: 10% 0;
+	font-size: 30px;
+	cursor: pointer;
+}
+#wakeCont {
+	width: 100%;
+	height: 60%;
+	margin-top: 40%;
+	color: inherit;
+	text-align: center;
+	font-size: 30px;
+}
+.wakeOption {
+	width: 70%;
+	margin: 5% 15%;
+	padding: 10px 0;
+	cursor: pointer;
+}
+#wakeNormal {
+	border: solid 2px;
+}
+#customColor {
+	display: none;
+}
+input[type="color"] {
+	width: 30%;
+	height: 30px;
+	margin-top: -5%;
+}
+#mathsCont, #wakeUpNormalScreen, #snoozeScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: inherit;
+	color: inherit;
+	z-index: 15;
+	margin-left: -100%;
+	transition: all 0.2s linear;
+}
+#offNormalWake {
+	width: 60%;
+	height: 200px;
+	line-height: 100px;
+	text-align: center;
+	margin: 35% 20% 0 20%;
+	font-size: 50px;
+	border: solid 2px;
+	cursor: pointer;
+}
+.snoozeControl {
+	width: 80%;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	text-align: center;
+	margin: 25% 10%;
+	border: solid 2px;
+	cursor: pointer;
+}
+@keyframes wakeAnimate {
+	50% {
+		transform: scale(1.1);
+		color: red;
+	}
+	100% {
+		transform: scale(1);
+		color: inherit;
+	}
+}
+#calc {
+	width: 100%;
+	margin-top: 30%;
+	font-size: 60px;
+	text-align: center;
+}
+#calc span {
+	width: 33%;
+	text-align: center;
+	margin: 0 5%;
+}
+#numInput {
+	width: 40%;
+	margin: 10% 28% 0 28%;
+	font-size: 50px;
+	padding: 10px;
+	text-align: center;
+	color: inherit;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-bottom: solid 5px;
+}
+#calcSubmit {
+	display: block;
+	font-size: 30px;
+	padding: 15px 5px;
+	color: inherit;
+	background-color: rgba(0,0,0,0);
+	border: solid 2px;
+	width: 80%;
+	margin: 15% 10% 0 10%;
+	cursor: pointer;
+}
+#tonesCont {
+	font-size: 25px;
+	color: inherit;
+	background-color: inherit;
+	width: 100%;
+	height: 100%;
+	margin-top: 25%;
+}
+.songLine {
+	width: 100%;
+	margin: 8% 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	cursor: pointer;
+}
+.songLine input[type="radio"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.songLine input[type="radio"]:checked~span {
+	visibility: visible;
+}
+.songLine span {
+	width: 15%;
+	text-align: center;
+	margin-left: 2%;
+	visibility: hidden;
+}
+.songLine label {
+	width: 80%;
+	margin-left: 3%;
+}
+@keyframes audioPulse {
+	50% {
+		transform:scale(1.4);
+	}
+	100% {
+		transform:scale(1.0);
+	}
+}
+
+}
+

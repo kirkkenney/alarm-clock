@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link type="text/css" rel="stylesheet" href="style.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Kirk's New Alarm</title>
+    </head>
+    <body id="body">
+    	<div id="time"><span class="time"></span><span class="time"></span></div>
+    	<div id="date"></div>
+    	<div id="inputCont">
+    		<div id="hourCont">
+    			<button id="hourInc">&#65087;</button>
+    			<input type="number" id="hourInput" value="" readonly />
+    			<button id="hourDec">&#65088;</button>
+    		</div>
+    		<div id="minCont">
+    			<button id="minInc">&#65087;</button>
+    			<input type="number" id="minInput" value="" readonly />
+    			<button id="minDec">&#65088;</button>
+    		</div>
+    	</div>
+    	    <button id="setAlarm">Set Alarm</button>
+    		<button id="resetAlarm">Reset Alarm</button>
+    		<div id="settings">&#9881;</div>
+
+    		<div id="settingsScreen">
+    			<div class="close" id="closeSettings">&#9001;</div>
+    			<div id="settingsCont">
+    				<div class="settingsOption" id="themes">Color Scheme</div>
+    				<div class="settingsOption" id="tones">Alarm Tones</div>
+    				<div class="settingsOption" id="wakeup">Wake Up Mode</div>
+                    <div id="settingsWarning">Changing the settings may reset your alarm</div>
+    			</div>
+    		</div>
+
+    		<div id="themesScreen">
+    			<div class="close" id="closeThemes">&#9001;</div>
+    			<div id="themesCont">
+    			<div class="themesOption" id="dark">Dark</div>
+    			<div class="themesOption" id="light">Light</div>
+    			<div class="themesOption" id="vibrant">Vibrant</div>
+    			<div class="themesOption" id="blue">Blue</div>
+    			<div class="themesOption" id="neon">Neon</div>
+    			<div class="themesOption" id="custom">Custom</div>
+    			<div id="customColor">
+    				<input type="color" id="bgColor" value="#ff0000" />
+    				<input type="color" id="fgColor" value="#ffe640" />
+    			</div>
+    		</div>
+    		</div>
+
+            <div id="wakeUpSettings">
+                <div class="close" id="closeWake">&#9001;</div>
+                <div id="wakeCont">
+                    <div id="wakeNormal" class="wakeOption">Normal Wakeup</div>
+                    <div id="wakeGradual" class="wakeOption">Gradual Wakeup</div>
+                    <div id="wakeMaths" class="wakeOption">Maths Question</div>
+                </div>
+            </div>
+
+            <div id="tonesScreen">
+                <div class="close" id="closeTones">&#9001;</div>
+                <div id="tonesCont">
+                   <div class="songLine"><input type="radio" id="chirping" value=0 name="songChoice" class="songCheck" checked /><span class="demo">&#128264;</span><label for="chirping">Chirping Birds</label></div>
+                   <div class="songLine"><input type="radio" id="crickets" value=1 name="songChoice" class="songCheck" /><span class="demo">&#128264;</span><label for="crickets">Crickets & Owls</label></div>
+                   <div class="songLine"><input type="radio" id="jungle" value=2 name="songChoice" class="songCheck" /><span class="demo">&#128264;</span><label for="jungle">Jungle Sounds</label></div>
+                   <div class="songLine"><input type="radio" id="rain" value=3 name="songChoice" class="songCheck" /><span class="demo">&#128264;</span><label for="rain">Morning Rain</label></div>
+                   <div class="songLine"><input type="radio" id="thunder" value=4 name="songChoice" class="songCheck" /><span class="demo">&#128264;</span><label for="thunder">Relaxing Thunder</label></div>
+                   <div class="songLine"><input type="radio" id="waves" value=5 name="songChoice" class="songCheck" /><span class="demo">&#128264;</span><label for="waves">Ocean Waves</label></div>
+                   <audio class="song" type="audio/mp3" src="audio/chirping.mp3"></audio>
+                   <audio class="song" type="audio/mp3" src="audio/crickets.mp3"></audio>
+                   <audio class="song" type="audio/mp3" src="audio/jungle.mp3"></audio>
+                   <audio class="song" type="audio/mp3" src="audio/rain.mp3"></audio>
+                   <audio class="song" type="audio/mp3" src="audio/thunder.mp3"></audio>
+                   <audio class="song" type="audio/mp3" src="audio/waves.mp3"></audio>
+                </div>
+            </div>
+
+            <div id="mathsCont">
+                <div id="calc"><span id="num1"></span><span id="operator">+</span><span id="num2"></span></div>
+                <input type="number" id="numInput" />
+                <button id="calcSubmit">Turn Off Alarm</button>
+            </div>
+
+            <div id="wakeUpNormalScreen">
+                <div id="offNormalWake">I'm Awake!</div>
+            </div>
+
+            <div id="snoozeScreen">
+                <div id="snooze" class="snoozeControl">Snooze</div>
+                <div id="awake" class="snoozeControl">I'm Awake!</div>
+            </div>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
